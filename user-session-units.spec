@@ -1,16 +1,17 @@
 Summary:	Systemd units files related to user session
 Name:		user-session-units
-Version:	5
-Release:	2
+Version:	6
+Release:	1
 License:	GPL v3
 Group:		Applications
 Source0:	http://foo-projects.org/~sofar/user-session-units/%{name}-%{version}.tar.gz
-# Source0-md5:	865aa064fe616c3be1a591844b0b47de
+# Source0-md5:	f7a48298eca6a32904fcf8900afc20b3
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	systemd-devel
 BuildRequires:	pkg-config
+BuildArch:	noarch
 Requires:	dbus-launch
 Requires:	systemd
 Requires:	xorg-launch-helper
@@ -58,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
+/usr/lib/systemd/system/shutdown.target.wants/systemd-stop-user-sessions.service
+/usr/lib/systemd/system/systemd-stop-user-sessions.service
 /usr/lib/systemd/system/user-session@.service
 /usr/lib/systemd/user/dbus.service
 /usr/lib/systemd/user/dbus.socket
