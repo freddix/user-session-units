@@ -1,11 +1,11 @@
 Summary:	Systemd units files related to user session
 Name:		user-session-units
-Version:	6
+Version:	7
 Release:	1
 License:	GPL v3
 Group:		Applications
 Source0:	http://foo-projects.org/~sofar/user-session-units/%{name}-%{version}.tar.gz
-# Source0-md5:	f7a48298eca6a32904fcf8900afc20b3
+# Source0-md5:	baec7a3915bd8fb84f360a14f4fc36e8
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -34,8 +34,6 @@ User session units for XFCE.
 
 %prep
 %setup -q
-
-sed -i -e "s|AC_ERROR|AC_WARNING|" configure.ac
 
 %build
 %{__libtoolize}
