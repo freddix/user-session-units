@@ -1,11 +1,11 @@
 Summary:	Systemd units files related to user session
 Name:		user-session-units
-Version:	7
+Version:	8
 Release:	1
 License:	GPL v3
 Group:		Applications
 Source0:	http://foo-projects.org/~sofar/user-session-units/%{name}-%{version}.tar.gz
-# Source0-md5:	baec7a3915bd8fb84f360a14f4fc36e8
+# Source0-md5:	1231886b30c4d24907e3547bad3479bc
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
